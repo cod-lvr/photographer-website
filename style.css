@@ -1,0 +1,245 @@
+/*
+===============Fonts===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Crete+Round&display=swap');
+
+/*
+===============Variables===============
+*/
+
+:root {
+  /* other color */
+  --clr-white: #fff;
+  --clr-gold: #c59d5f;
+  --clr-black: rgb(13,13,13);
+  /* custom */
+  --ff-primary: 'Arvo', serif;
+  --ff-secondary: 'Crete Round', serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+  --border-color: rgb(240, 201, 127), rgb(184, 98, 58);
+}
+/*
+===============Global Styles===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-black);
+  color: var(--clr-white);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+video {
+  z-index: -999;
+  width: 100%;
+  opacity: 0.6;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+  text-transform: capitalize;
+  font-size: 0.954;
+}
+.arrow {
+  font-size: 70px;
+  color: whitesmoke;
+  font-weight: 200;
+  display: block;
+  text-align: center;
+}
+.break {
+  height: 5px;
+  background-color: var(--clr-gold);
+  width: 40px;
+  margin-left: 48%;
+  margin-bottom: 11px;
+  display: block;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.95rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+.btn {
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--clr-white);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid var(--clr-gold);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.959);
+  border-radius: var(--radius);
+}
+.btn:hover,
+.arrow:hover {
+  color: var(--clr-gold);
+  background: var(--clr-black);
+}
+
+/* container-one*/
+.container {
+  position: relative;
+  width: 100%;
+}
+.content-box-1 {
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.social-links > span{
+  margin-right: 1rem;
+}
+/*
+===============slide===============
+*/
+.slide {
+  max-height: 80vh;
+  display: block;
+  text-align: center;
+  padding: 70px;
+}
+/*
+===============container-two===============
+*/
+.container-two {
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.photog{
+  width: 100%;
+}
+.photog  img{
+  width: 90%;
+  display: block;
+}
+.content-box-2 {
+  padding: 0 25px;
+  text-align: left;
+}
+/*
+===============container-three===============
+*/
+.container-three {
+  max-height: 80vh;
+  text-align: center;
+  width: 100%;
+}
+.container-three .girdy{
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.box {
+  border: 1px solid var(--clr-gold);
+  border-radius: var(--radius);
+  padding: 50px 20px 20px;
+  font-size: 1.454rem;
+  text-transform: uppercase;
+}
+.footer-gridy{
+  display: flex;
+  width: 100%;
+
+}
+.footer-gridy > img {
+  width: 20%;
+  height: 20%;
+}
+/*
+===============scroll bar===============
+*/
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--clr-black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--clr-gold);
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-white);
+}
+
